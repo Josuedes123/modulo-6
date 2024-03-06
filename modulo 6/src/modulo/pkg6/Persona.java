@@ -9,12 +9,27 @@ package modulo.pkg6;
  * @author franc
  */
 public class Persona {
+    private String nombre;
+    private int edad;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
     }
-    
+
+    public String obtenerInformacion() {
+        return "Nombre: " + nombre + ", Edad: " + edad;
+    }
+
+    public void establecerInformacion(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public static void main(String[] args) {
+        // Crear una instancia de Persona
+        Persona persona = new Persona("Juan", 30);
+        System.out.println(persona.obtenerInformacion());
+    }
 }
+
