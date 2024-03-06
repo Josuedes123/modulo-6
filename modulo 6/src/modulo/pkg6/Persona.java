@@ -7,6 +7,7 @@ package modulo.pkg6;
 /**
  *
  * @author franc
+ * 05/03/24
  */
 import java.util.Scanner;
 
