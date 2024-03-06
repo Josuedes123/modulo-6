@@ -4,10 +4,6 @@
  */
 package modulo.pkg6;
 
-/**
- *
- * @author franc
- */
 public class SubClaseDoctor extends Persona {
     private String especialidad;
 
