@@ -8,7 +8,9 @@ package modulo.pkg6;
  *
  * @author franc
  */
-public class Persona {
+import java.util.Scanner;
+
+class Persona {
     private String nombre;
     private int edad;
 
@@ -21,15 +23,26 @@ public class Persona {
         return "Nombre: " + nombre + ", Edad: " + edad;
     }
 
-    public void establecerInformacion(String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
-    }
-
     public static void main(String[] args) {
-        // Crear una instancia de Persona
-        Persona persona = new Persona("Juan", 30);
-        System.out.println(persona.obtenerInformacion());
-    }
-}
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("¿Qué clase deseas ejecutar? (1 para Doctor, 2 para Deportista):");
+        int opcion = scanner.nextInt();
+
+        switch (opcion) {
+            case 1 -> {
+                // Crear una instancia de Doctor
+                SubClaseDoctor doctor = new SubClaseDoctor("Dr. Smith", 40, "Cardiología");
+                System.out.println(doctor.obtenerInformacion());
+            }
+
+            case 2 -> {
+                 // Crear una instancia de Deportista
+        /* Deportista deportista = new Deportista("Ana", 25, "Natación");
+        System.out.println(deportista.obtenerInformacion());*/
+            }
+            default -> System.out.println("Opción no válida. Elige 1 o 2.");
+        }
+       
+            }
+}
