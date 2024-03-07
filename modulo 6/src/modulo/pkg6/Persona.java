@@ -27,20 +27,20 @@ class Persona {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("¿Qué clase deseas ejecutar? (1 para Doctor, 2 para Deportista):");
+        System.out.println("Que clase deseas ejecutar? (1 para Doctor, 2 para Deportista):");
         int opcion = scanner.nextInt();
 
         switch (opcion) {
             case 1 -> {
                 // Crear una instancia de Doctor
-                SubClaseDoctor doctor = new SubClaseDoctor("Dr. Smith", 40, "Cardiología");
+                SubClaseDoctor doctor = new SubClaseDoctor("Dr. Smith", 40, "especialidad");
                 System.out.println(doctor.obtenerInformacion());
             }
 
             case 2 -> {
                  // Crear una instancia de Deportista
-        /* Deportista deportista = new Deportista("Ana", 25, "Natación");
-        System.out.println(deportista.obtenerInformacion());*/
+        Deportista deportista = new Deportista("Ana", 25, "deporte");
+        System.out.println(deportista.obtenerInformacion());
             }
             default -> System.out.println("Opción no válida. Elige 1 o 2.");
         }
