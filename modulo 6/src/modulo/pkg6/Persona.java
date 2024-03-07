@@ -33,17 +33,17 @@ class Persona {
         switch (opcion) {
             case 1 -> {
                 // Crear una instancia de Doctor
-                SubClaseDoctor doctor = new SubClaseDoctor("Dr. Smith", 40, "especialidad");
-                System.out.println(doctor.obtenerInformacion());
+            SubClaseDoctor doctor = new SubClaseDoctor("Dr. Smith", 40, "especialidad");
+            System.out.println(doctor.obtenerInformacion());
             }
 
             case 2 -> {
                  // Crear una instancia de Deportista
-        Deportista deportista = new Deportista("Ana", 25, "deporte");
-        System.out.println(deportista.obtenerInformacion());
+            Deportista deportista = new Deportista("Ana", 25, "deporte");
+            System.out.println(deportista.obtenerInformacion());
             }
             default -> System.out.println("Opción no válida. Elige 1 o 2.");
         }
        
-            }
+    }
 }
