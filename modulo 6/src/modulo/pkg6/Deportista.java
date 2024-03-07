@@ -7,8 +7,9 @@ package modulo.pkg6;
 /**
  *
  * @author merce
+ * Eliminacion de Main
  */
-public class Deportista {
+public class Deportista extends Persona {
     
     private String nombre;
     private int edad;
@@ -54,17 +55,6 @@ public class Deportista {
     }
 
     
-    public static void main(String[] args) {
-        Deportista deportista = new Deportista("Juan", 25, "FÃºtbol");
-
-        System.out.println("InformaciÃ³n del deportista:");
-        deportista.mostrarInformacion();
-
-        
-        deportista.setEdad(26);
-
-        
-        System.out.println("\nInformaciÃ³n actualizada del deportista:");
-        deportista.mostrarInformacion();
+    
     }
 }
