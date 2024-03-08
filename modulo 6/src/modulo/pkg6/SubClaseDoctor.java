@@ -10,10 +10,10 @@ package modulo.pkg6;
     public SubClaseDoctor(String nombre, int edad, String especialidad) {
         super(nombre, edad);
         this.especialidad = "cardiologo";
-    }
+}
 
     @Override
     public String obtenerInformacion() {
         return super.obtenerInformacion() + ", Especialidad: " + especialidad;
-    }
+}
 }
