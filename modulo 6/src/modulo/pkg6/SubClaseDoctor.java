@@ -4,21 +4,16 @@
  */
 package modulo.pkg6;
 
-public class SubClaseDoctor extends Persona {
+ class SubClaseDoctor extends Persona {
     private String especialidad;
 
-    
-    public SubClaseDoctor(String nombre, String apellido, int edad, double salario, String numeroDeIdentificacion, String genero, String especialidad) {
-        super(nombre, apellido, edad, salario, numeroDeIdentificacion, genero);
-        this.especialidad = especialidad;
+    public SubClaseDoctor(String nombre, int edad, String especialidad) {
+        super(nombre, edad);
+        this.especialidad = "cardiologo";
     }
 
     
-    public String getEspecialidad() {
-        return especialidad;
-    }
-
-    public void setEspecialidad(String especialidad) {
-        this.especialidad = especialidad;
+    public String obtenerInformacion() {
+        return super.obtenerInformacion() + ", Especialidad: " + especialidad;
     }
 }
