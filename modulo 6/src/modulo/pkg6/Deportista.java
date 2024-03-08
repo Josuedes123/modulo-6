@@ -7,54 +7,30 @@ package modulo.pkg6;
 /**
  *
  * @author merce
- * Eliminacion de Main
+ * Se crea el atributo deporte privado de tipo String.
+-Se modifica el constructor Deportista que hereda (nombre, edad) de la super clase y establece el valor
+-del atributo deporte como "Futbolista".
+- se eliminan los atributos innecesarios siguentes
+setNombre.  Establece el valor del atributo nombre.
+setEdad(int edad): Establece el valor del atributo edad.
+setDeporte(String deporte): Establece el valor del atributo deporte.
+getNombre(): Devuelve el valor del atributo nombre.
+getEdad(): Devuelve el valor del atributo edad.
+getDeporte(): Devuelve el valor del atributo deporte.
+
+Se sobre escribe el atributo de la super clase public String obtenerInformacion() y hizo concordar con el formato dado.
  */
-public class Deportista extends Persona {
+public class Deportista extends Persona{
     
     private String nombre;
-    private int edad;
-    private String deporte;
-
+    private final String deporte;
     
     public Deportista(String nombre, int edad, String deporte) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.deporte = deporte;
+        super(nombre, edad);
+        this.deporte = "Futbolista";
     }
-
-   
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public void setDeporte(String deporte) {
-        this.deporte = deporte;
-    }
-
-    
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public String getDeporte() {
-        return deporte;
-        }
-        
-        public void mostrarInformacion() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Edad: " + edad);
-        System.out.println("Deporte: " + deporte);
-    }
-
-    
-    
+     @Override
+    public String obtenerInformacion() {
+        return super.obtenerInformacion() + ", deporte: " + deporte;
     }
 }
