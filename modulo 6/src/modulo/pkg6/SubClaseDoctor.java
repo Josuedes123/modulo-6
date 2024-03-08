@@ -4,7 +4,7 @@
  */
 package modulo.pkg6;
 
- class SubClaseDoctor extends Persona {
+ public class SubClaseDoctor extends Persona {
     private String especialidad;
 
     public SubClaseDoctor(String nombre, int edad, String especialidad) {
@@ -12,7 +12,7 @@ package modulo.pkg6;
         this.especialidad = "cardiologo";
     }
 
-    
+    @Override
     public String obtenerInformacion() {
         return super.obtenerInformacion() + ", Especialidad: " + especialidad;
     }
